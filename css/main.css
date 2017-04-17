@@ -9,6 +9,10 @@ p.indented {
   text-indent: 2em;
 }
 
+a {
+  color: #E67E22;
+}
+
 hr {
   width: 70%;
   margin-top: 4rem;
@@ -87,6 +91,8 @@ footer {
 .feature-block {
   clear: both;
   font-size: 150%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .feature-block .left {
@@ -95,4 +101,24 @@ footer {
 
 .feature-block .right {
   float: right;
+}
+
+.btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  background-color: #D35400;
+  color: white;
+  text-shadow: 1px 1px rgba(0,0,0,0.5);
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #E67E22;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.form-button {
+  margin-top: 3rem;
 }
