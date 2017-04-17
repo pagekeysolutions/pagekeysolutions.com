@@ -1,0 +1,16 @@
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.btn-group {
+  margin: 0 auto;
+}
+.mynav {
+  width: 100%;
+}
