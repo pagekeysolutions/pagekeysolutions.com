@@ -122,3 +122,23 @@ footer {
 .form-button {
   margin-top: 3rem;
 }
+
+/* Image Slider */
+.slider {
+  position: relative;
+}
+.slide {
+  display: none;
+}
+.slide-left {
+  
+}
+.slide-right {
+  
+}
+.slide-title {
+  
+}
+img.slide-image {
+  width: 2px;height:2px;
+}
