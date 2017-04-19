@@ -138,6 +138,7 @@ footer {
   display: inline-block;
 }
 .slide-title {
+  padding-bottom: 1rem;
   text-align: center;
   font-size: 120%;
   font-weight: bold;
@@ -145,6 +146,7 @@ footer {
 
 
 .slide-buttons {
+  padding-top: 1rem;
   text-align: center;
 }
 .slide-left, .slide-right {
@@ -156,4 +158,5 @@ img.slide-image {
   height: 80%;
   margin: auto;
   display: block;
+  border: 1px solid rgba(0,0,0,0.1);
 }
