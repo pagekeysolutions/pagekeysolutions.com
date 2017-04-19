@@ -1,7 +1,3 @@
-window.onload = function() {
-  document.getElementById("year").innerHTML = new Date().getFullYear();
-};
-
 // analytics
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -12,20 +8,28 @@ ga('create', 'UA-53512121-3', 'auto');
 ga('send', 'pageview');
 
 
-/* --------- Slider Code ---------- */
+/* ---------- Display Year ---------- */
+window.onload = function() {
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+};
+
+/* ---------- Slider Code  ---------- */
+var SLIDER_AUTO_TIME = 5000;
 var currentSlide = 0;
+var slider = document.getElementsByClassName("slider")[0];
 var slides = document.getElementsByClassName("slide");
 // Assign button listeners
-for (var i = 0; i < slides.length; i++) {
-  slides[i].querySelector(".slide-left").addEventListener("click", showPrev);
-  slides[i].querySelector(".slide-right").addEventListener("click", showNext);
-}
-slides[currentSlide].style.display = "block";
+slider.querySelector(".slide-left").addEventListener("click", showPrev);
+slider.querySelector(".slide-right").addEventListener("click", showNext);
+
+slides[currentSlide].style.opacity = 1;
+// Autoplay
+setInterval(showNext, SLIDER_AUTO_TIME);
 
 function showNext() {
-  slides[currentSlide].style.display = "none";
+  slides[currentSlide].style.opacity = 0;
   currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].style.display = "block";
+  slides[currentSlide].style.opacity = 1;
 }
 function showPrev() {
   console.log(currentSlide);

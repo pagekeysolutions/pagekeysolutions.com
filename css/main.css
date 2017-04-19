@@ -128,17 +128,28 @@ footer {
   position: relative;
 }
 .slide {
-  display: none;
-}
-.slide-left {
-  
-}
-.slide-right {
-  
+  position: absolute;
+  transition: all 0.5s;
+  opacity: 0;
+  overflow: hidden;
 }
 .slide-title {
-  
+  text-align: center;
+  font-size: 120%;
+  font-weight: bold;
 }
+.slide-clear {
+  display: block;
+}
+
+/*
+.slide-left {
+  float: left;
+}
+.slide-right {
+  float: right;
+}*/
 img.slide-image {
-  width: 2px;height:2px;
+  width: 100%;
+  height: 100%;
 }
