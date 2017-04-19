@@ -125,31 +125,35 @@ footer {
 
 /* Image Slider */
 .slider {
+
+}
+.slides {
   position: relative;
+  left: 0;
+  transition: all 0.5s;
+  white-space: nowrap;
+  overflow: visible;
 }
 .slide {
-  position: absolute;
-  transition: all 0.5s;
-  opacity: 0;
-  overflow: hidden;
+  display: inline-block;
 }
 .slide-title {
   text-align: center;
   font-size: 120%;
   font-weight: bold;
 }
-.slide-clear {
-  display: block;
+
+
+.slide-buttons {
+  text-align: center;
+}
+.slide-left, .slide-right {
+  width: 20%;
 }
 
-/*
-.slide-left {
-  float: left;
-}
-.slide-right {
-  float: right;
-}*/
 img.slide-image {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  display: block;
 }

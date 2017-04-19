@@ -15,25 +15,39 @@ window.onload = function() {
 
 /* ---------- Slider Code  ---------- */
 var SLIDER_AUTO_TIME = 5000;
+var inputPause = false;
 var currentSlide = 0;
 var slider = document.getElementsByClassName("slider")[0];
 var slides = document.getElementsByClassName("slide");
 // Assign button listeners
-slider.querySelector(".slide-left").addEventListener("click", showPrev);
-slider.querySelector(".slide-right").addEventListener("click", showNext);
+slider.querySelector(".slide-left").addEventListener("click", function() {
+  inputPause = true;
+  showPrev();
+});
+slider.querySelector(".slide-right").addEventListener("click", function() {
+  inputPause = true;
+  showNext();
+});
 
-slides[currentSlide].style.opacity = 1;
 // Autoplay
-setInterval(showNext, SLIDER_AUTO_TIME);
+setInterval(function() {
+  // Pause input when the user touches the carousel (up to double the delay)
+  if (inputPause) {
+    inputPause = false;
+  } else {
+    showNext();
+  }
+}, SLIDER_AUTO_TIME);
 
 function showNext() {
-  slides[currentSlide].style.opacity = 0;
   currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].style.opacity = 1;
+  selectSlide();
 }
 function showPrev() {
-  console.log(currentSlide);
-  slides[currentSlide].style.display = "none";
   currentSlide = (currentSlide - 1 + slides.length) % slides.length
-  slides[currentSlide].style.display = "block";
+  selectSlide();
+}
+function selectSlide() {
+  var percentage = 100 * currentSlide;
+  slider.getElementsByClassName("slides")[0].style.left = "-" + percentage + "%";
 }
