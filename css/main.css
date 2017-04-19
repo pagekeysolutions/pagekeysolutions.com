@@ -97,11 +97,13 @@ footer {
 }
 
 .feature-block .left {
-  float: left;
+  font-weight: bold;
+  text-align: center;
 }
 
 .feature-block .right {
-  float: right;
+  padding-top: 0.5rem;
+  text-align: center;
 }
 
 .btn {
@@ -160,4 +162,25 @@ img.slide-image {
   margin: auto;
   display: block;
   border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Form Styling */
+form {
+  text-align: center;
+  padding: 1rem 0;
+}
+form input, form button, form textarea {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  width: 90%;
+  font: inherit;
+  font-size: 60%;
+}
+form input, form textarea {
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+form textarea {
+  resize: none;
 }
