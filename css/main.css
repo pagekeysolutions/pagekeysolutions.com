@@ -29,8 +29,9 @@ div.title {
 
 img.logo {
   margin: 0 auto;
-  padding: 1rem;
-  width: 100px;
+  display: block;
+  padding: 0.5rem;
+  width: 75px;
 }
 
 h1 {
@@ -38,7 +39,7 @@ h1 {
   font-size: 400%;
   display: inline;
   position: relative;
-  top: -1.7rem;
+  top: -0.5rem;
 }
 
 h2 {
