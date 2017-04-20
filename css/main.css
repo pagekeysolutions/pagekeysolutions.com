@@ -22,9 +22,23 @@ hr {
   border-top: 1px solid rgba(0,0,0,0.1);
 }
 
+div.title {
+  text-align: center;
+  margin-bottom: -1.7rem;
+}
+
+img.logo {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100px;
+}
+
 h1 {
   text-align: center;
   font-size: 400%;
+  display: inline;
+  position: relative;
+  top: -1.7rem;
 }
 
 h2 {
