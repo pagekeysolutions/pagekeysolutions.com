@@ -1,9 +1,12 @@
+html, body, section {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: white;
   color: #2C3E50;
   margin: 0;
-  overflow-x: hidden;
 }
 
 p.indented {
