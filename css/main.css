@@ -45,8 +45,8 @@ h1 {
   top: -0.5rem;
 }
 
-h2 {
-  font-size: 200%;
+h3 {
+  font-size: 150%;
   text-align: center;
 }
 
@@ -127,13 +127,13 @@ footer {
 .btn {
   padding: 0.7rem 1.2rem;
   border-radius: 6px;
-  background-color: #D35400;
+  background-color: #E67E22;
   color: white;
   text-shadow: 1px 1px rgba(0,0,0,0.5);
   text-decoration: none;
 }
 .btn:hover {
-  background-color: #E67E22;
+  background-color: #D35400;
 }
 
 .text-center {
