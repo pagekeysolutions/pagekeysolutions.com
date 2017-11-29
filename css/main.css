@@ -39,15 +39,36 @@ nav ul li a {
 .jumbotron {
   margin-top: 1.5em ;
   background-image: url('../img/carousel-dark.jpg');
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;
-color: white;
-text-shadow: 1px 1px black;
-padding-left: 5em;
-padding-right: 5em;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px black;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 .text-center {
+  text-align: center;
+}
+
+.row {
+  margin: auto;
+}
+.col {
+  margin: auto;
+}
+
+.col h1 {
+  margin-bottom: 1em;
+}
+
+.footer {
+  padding-top: 5em;
+  margin: auto;
+  text-align: center;
+}
+
+form#form_contact {
   text-align: center;
 }
