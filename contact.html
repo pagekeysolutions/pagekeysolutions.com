@@ -72,7 +72,7 @@
       <nav>
         <ul class="nav nav-pills">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/services">Services</a>
@@ -84,28 +84,39 @@
             <a class="nav-link" href="/careers">Careers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
+            <a class="nav-link active" href="#">Contact <span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </nav>
     </div>
 
-
-      <div class="jumbotron">
-        <h1 class="display-3">The <b>Key</b> to Success on the Web</h1>
-        <p class="lead text-center">IT Consulting ♦ Websites &amp; Apps ♦ Custom Software</p>
-        <p class="text-center"><a class="btn btn-lg btn-success" href="#contact" role="button">Contact Us Today</a></p>
-      </div>
-
-      <div class="row feature-contact">
-          <div class="col col-lg-4 text-left">
-            <a href="mailto:dev@pagekeysolutions.com">dev@pagekeysolutions.com</a>
-          </div>
-          <div class="col col-lg-4 text-right">
-            <a href="tel:609-521-8918">(609) 521-8918</a>
-          </div>
+      <div class="row">
+        <div class="col col-lg-12 text-center">
+          <h1 id="contact">Contact</h1>
         </div>
-      </section>
+      </div>
+      <div class="row">
+        <div class="col col-lg-12 text-center">
+          <h2>Tell us about your project!</h2>
+          <p>
+            <p>How can we take your business to the next level? Let us know below.</p>
+          </p>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col col-lg-12">
+          <form class="form-group" id="form_contact" method="post" action="https://formspree.io/dev@pagekeysolutions.com">
+            <input class="form-control" type="email" name="_replyto" placeholder="Your Email" required />
+            <input class="form-control" type="tel" name="phone" placeholder="Your Phone (optional)" />
+            <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+            <button class="btn btn-primary" type="submit">Send</button>
+
+            <input type="hidden" name="_next" value="http://pagekeysolutions.com/thankyou.html">
+            <input type="hidden" name="_subject" value="PageKey Contact Form">
+            <input type="text" name="_gotcha" style="display:none;" />
+          </form>
+        </div>
+      </div>
 
       <footer class="footer">
         <p>&copy; PageKeySolutions <span id="year">2018</span></p>
