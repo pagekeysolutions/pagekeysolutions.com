@@ -80,8 +80,15 @@ nav ul li a {
   color: white;
 }
 
+.row {
+  padding-bottom: 1em;
+}
 .row h1 {
   margin-top: 5em;
+}
+.row img {
+  border-radius: 2em;
+  box-shadow: 2px 2px rgba(0,0,0,0.4);
 }
 
 .form-group {
