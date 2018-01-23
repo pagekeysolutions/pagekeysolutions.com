@@ -69,6 +69,32 @@ nav ul li a {
   text-align: center;
 }
 
-form#form_contact {
-  text-align: center;
+.feature-contact {
+  font-size: 150%;
+  background-color: #2c3e50;
+  border-radius: 2em;
+  padding: 0.5em;
+  margin-top: 2em;
+}
+.feature-contact a {
+  color: white;
+}
+
+.row h1 {
+  margin-top: 5em;
+}
+
+.form-group {
+  border: 2px solid rgba(0,0,0,0.2);
+  padding: 2em;
+  border-radius: 2em;
+}
+.form-group .form-control {
+  padding: 0.5em;
+  margin: 1.5em auto;
+}
+
+.form-group .btn {
+  width: 75%;
+  min-height: 2em;
 }
