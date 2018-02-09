@@ -1,0 +1,330 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    color: lightblue; }
+
+/** HEADER */
+header {
+  position: absolute;
+  width: 100%; }
+  header div.title {
+    padding: 0.5rem;
+    display: inline-block;
+    font-family: 'Oswald',sans-serif;
+    font-size: 1.7rem;
+    color: #fcfcfc;
+    margin-right: auto; }
+    header div.title img {
+      width: 2.1rem;
+      height: 2.1rem;
+      margin-bottom: -0.45rem; }
+  header div.hamburger {
+    padding: 0.6rem;
+    float: right; }
+    header div.hamburger span.line {
+      display: block;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 1em;
+      width: 1.7em;
+      height: 0.2em;
+      margin: 0.4em; }
+  header nav {
+    display: block; }
+    header nav ul {
+      font-family: 'Oswald',sans-serif;
+      padding-left: inherit;
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 0;
+      color: #fcfcfc;
+      display: none;
+      list-style-type: none;
+      background-color: rgba(0, 0, 0, 0.8); }
+      header nav ul li {
+        width: 80%;
+        margin: auto;
+        padding: 1rem;
+        display: block;
+        border-bottom: 1px solid #333; }
+      header nav ul li:last-child {
+        border-bottom: none; }
+
+/** CENTERED INTRO SLIDE */
+.intro-wrap {
+  background-image: url("/images/bg-computer.jpeg");
+  background-position: center;
+  background-size: cover;
+  color: #fcfcfc;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: table; }
+  .intro-wrap .intro {
+    padding-top: 3rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: table; }
+    .intro-wrap .intro .intro-text {
+      max-width: 600px;
+      margin: 0 auto;
+      vertical-align: middle;
+      display: table-cell; }
+      .intro-wrap .intro .intro-text hr {
+        width: 60%;
+        color: #fcfcfc;
+        margin: 1em auto; }
+      .intro-wrap .intro .intro-text div p {
+        margin: 0; }
+      .intro-wrap .intro .intro-text div p.lead {
+        font-size: 3.5rem; }
+      .intro-wrap .intro .intro-text div p {
+        font-size: 2.0rem; }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
+section {
+  padding: 3em 0;
+  text-align: center; }
+  section form input {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.4); }
+  section form button {
+    background-color: #448AFF; }
+  section h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-top: 0; }
+
+/** Good things section **/
+section.icons-wrap {
+  padding: 1.5em 0.5em; }
+  section.icons-wrap .icon {
+    padding: 1.5em 0;
+    text-align: center; }
+    section.icons-wrap .icon img {
+      width: 5em;
+      height: auto; }
+
+/** Portfolio section **/
+section.portfolio-wrap {
+  background-color: #efefef; }
+  section.portfolio-wrap a {
+    color: inherit; }
+  section.portfolio-wrap .portfolio-item {
+    background-color: white;
+    margin: 1em 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px rgba(0, 0, 0, 0.2); }
+    section.portfolio-wrap .portfolio-item img {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 0; }
+    section.portfolio-wrap .portfolio-item h2 {
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+      color: #333; }
+    section.portfolio-wrap .portfolio-item:hover {
+      background-color: #448AFF;
+      color: white; }
+
+section.contact h1 {
+  padding-top: 1em; }
+section.contact h2 {
+  font-size: 2rem; }
+  section.contact h2:last-child {
+    font-size: 1rem; }
+
+/** Pre footer */
+.pre-footer {
+  background-color: #444;
+  color: #ddd;
+  height: 7em;
+  padding: 1.5em; }
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 1.5em; }
+
+form {
+  font-size: 2rem;
+  width: 100%; }
+  form input, form button {
+    width: 75%;
+    display: block;
+    margin: 0.5em auto;
+    font-size: inherit;
+    padding: 0.5em; }
+  form input {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 0.1em; }
+    form input::-webkit-input-placeholder {
+      color: #bbb; }
+    form input:-ms-input-placeholder {
+      color: #bbb; }
+    form input::-ms-input-placeholder {
+      color: #bbb; }
+    form input::placeholder {
+      color: #bbb; }
+  form button {
+    color: black;
+    background-color: #fcfcfc;
+    border: none;
+    border-radius: 0.5em; }
+
+/** MEDIA QUERIES =============================================**/
+@media screen and (min-width: 425px) {
+  section.icons-wrap .icon {
+    vertical-align: text-top;
+    width: 40%;
+    display: inline-block;
+    margin: 0.5em 1.5em; }
+
+  section.portfolio-wrap .portfolio-item {
+    width: 40%;
+    display: inline-block;
+    margin: 1.5em; }
+    section.portfolio-wrap .portfolio-item h2 {
+      padding: 0.5em; }
+
+  section.contact h1 {
+    padding-top: 1em; }
+  section.contact h2 {
+    font-size: 2.5rem; }
+    section.contact h2:last-child {
+      font-size: 2.5rem; } }
+@media screen and (min-width: 1024px) {
+  header {
+    background-color: rgba(0, 0, 0, 0.25); }
+    header div.title {
+      padding: 0.5rem;
+      font-size: 1.9rem; }
+      header div.title img {
+        width: 2.1rem;
+        height: 2.1rem;
+        margin-bottom: -0.6rem; }
+    header div.hamburger {
+      display: none; }
+    header nav {
+      display: inline-block;
+      float: right; }
+      header nav ul {
+        font-size: 1.5rem;
+        padding-left: inherit;
+        display: inline-block;
+        background-color: inherit; }
+        header nav ul li {
+          display: inline-block;
+          width: inherit;
+          border: none; }
+          header nav ul li:hover {
+            background-color: rgba(255, 255, 255, 0.5); }
+
+  .intro-wrap .intro .intro-text {
+    max-width: 80%; }
+    .intro-wrap .intro .intro-text hr {
+      display: none; }
+    .intro-wrap .intro .intro-text div {
+      margin: 6em auto; }
+      .intro-wrap .intro .intro-text div p.lead {
+        font-size: 5.5rem; }
+      .intro-wrap .intro .intro-text div p {
+        font-size: 4.0rem; }
+    .intro-wrap .intro .intro-text .signup p {
+      font-size: 2.0rem; }
+  .intro-wrap .intro form {
+    font-size: 2rem; } }
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 1.2rem; }
+
+  header div.title {
+    font-size: 3.9rem; }
+    header div.title img {
+      width: 4.1rem;
+      height: 4.1rem;
+      margin-bottom: -0.6rem; }
+  header nav ul {
+    font-size: 3rem; }
+
+  .intro-wrap .intro .intro-text div {
+    margin: 3.5em auto; }
+    .intro-wrap .intro .intro-text div p.lead {
+      font-size: 8.5rem; }
+    .intro-wrap .intro .intro-text div p {
+      font-size: 6.5rem; }
+  .intro-wrap .intro .intro-text .signup p {
+    font-size: 3rem; }
+  .intro-wrap .intro form {
+    font-size: 3rem; }
+
+  section.icons-wrap .icon {
+    width: 28%; }
+    section.icons-wrap .icon img {
+      width: 30%;
+      height: auto; }
+    section.icons-wrap .icon h2 {
+      font-size: 2rem; } }
+@media screen and (min-width: 2560px) {
+  body {
+    font-size: 2.5rem; }
+
+  header div.title {
+    font-size: 5.9rem; }
+    header div.title img {
+      width: 6.1rem;
+      height: 6.1rem;
+      margin-bottom: -0.6rem; }
+  header nav ul {
+    font-size: 4rem; }
+
+  .intro-wrap .intro .intro-text div {
+    margin: 0 auto; }
+    .intro-wrap .intro .intro-text div p.lead {
+      font-size: 12.5rem; }
+    .intro-wrap .intro .intro-text div p {
+      font-size: 8rem; }
+  .intro-wrap .intro .intro-text .signup p {
+    font-size: 4.5rem; }
+
+  section.icons-wrap .icon h2 {
+    font-size: 4rem; }
+
+  section h1 {
+    font-size: 6.5rem; }
+
+  form {
+    font-size: 4rem; } }
