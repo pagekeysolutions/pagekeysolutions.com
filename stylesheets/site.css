@@ -14,6 +14,7 @@ a {
 
 /** HEADER */
 header {
+  background-color: rgba(0, 0, 0, 0.25);
   position: absolute;
   width: 100%; }
   header div.title {
@@ -110,8 +111,9 @@ header {
 section {
   padding: 3em 0;
   text-align: center; }
-  section form input {
+  section form input, section form textarea {
     color: black;
+    font-family: inherit;
     background-color: rgba(0, 0, 0, 0.4); }
   section form button {
     background-color: #448AFF; }
@@ -120,6 +122,19 @@ section {
     text-transform: uppercase;
     font-weight: lighter;
     margin-top: 0; }
+
+/** Sign up section **/
+section#signup {
+  padding: 5em 0;
+  }
+  section#signup h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    text-transform: none;
+  }
+  section#signup p {
+    padding: 1em;
+  }
 
 /** Good things section **/
 section.icons-wrap {
@@ -180,7 +195,7 @@ footer {
 form {
   font-size: 2rem;
   width: 100%; }
-  form input, form button {
+  form input, form button, form textarea {
     width: 75%;
     display: block;
     margin: 0.5em auto;
@@ -191,13 +206,11 @@ form {
     background-color: rgba(255, 255, 255, 0.4);
     border: none;
     border-radius: 0.1em; }
-    form input::-webkit-input-placeholder {
+    form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
       color: #bbb; }
-    form input:-ms-input-placeholder {
+    form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
       color: #bbb; }
-    form input::-ms-input-placeholder {
-      color: #bbb; }
-    form input::placeholder {
+    form input::placeholder, form textarea::placeholder {
       color: #bbb; }
   form button {
     color: black;
@@ -228,7 +241,7 @@ form {
       font-size: 2.5rem; } }
 @media screen and (min-width: 1024px) {
   header {
-    background-color: rgba(0, 0, 0, 0.25); }
+     }
     header div.title {
       padding: 0.5rem;
       font-size: 1.9rem; }
@@ -265,7 +278,7 @@ form {
         font-size: 4.0rem; }
     .intro-wrap .intro .intro-text .signup p {
       font-size: 2.0rem; }
-  .intro-wrap .intro form {
+  .intro-wrap .intro .button {
     font-size: 2rem; } }
 @media screen and (min-width: 1440px) {
   body {
@@ -330,10 +343,18 @@ form {
     font-size: 4rem; } }
 
 .button {
-    padding: 1em;
-    font-size: 250%;
-    color: black;
-    background-color: #fcfcfc;
-    border: none;
-    border-radius: 0.5em; }
+  margin: 2em 0;
+  clear:both;
+  padding: 1em;
+  font-size: 2.5rem;
+  color: black;
+  background-color: #fcfcfc;
+  border: none;
+  border-radius: 0.5em;
+}
+.signup .btn-wrap {
+  padding-top: 4em;
+}
+.btn-action {
+  /* background-color: #EF5350; */
 }
