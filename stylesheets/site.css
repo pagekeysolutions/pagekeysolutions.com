@@ -145,6 +145,28 @@ section.icons-wrap {
     section.icons-wrap .icon img {
       width: 5em;
       height: auto; }
+@media screen and (min-width: 425px) {
+  section.icons-wrap .icon {
+    vertical-align: text-top;
+    width: 40%;
+    display: inline-block;
+    margin: 0.5em 1.5em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  section.icons-wrap .icon {
+    width: 28%; }
+    section.icons-wrap .icon img {
+      width: 30%;
+      height: auto; }
+    section.icons-wrap .icon h2 {
+      font-size: 2rem; }
+}
+@media screen and (min-width: 2560px) {
+  section.icons-wrap .icon h2 {
+    font-size: 4rem;
+  }
+}
 
 /** Portfolio section **/
 section.portfolio-wrap {
@@ -220,12 +242,6 @@ form {
 
 /** MEDIA QUERIES =============================================**/
 @media screen and (min-width: 425px) {
-  section.icons-wrap .icon {
-    vertical-align: text-top;
-    width: 40%;
-    display: inline-block;
-    margin: 0.5em 1.5em; }
-
   section.portfolio-wrap .portfolio-item {
     width: 40%;
     display: inline-block;
@@ -240,8 +256,6 @@ form {
     section.contact h2:last-child {
       font-size: 2.5rem; } }
 @media screen and (min-width: 1024px) {
-  header {
-     }
     header div.title {
       padding: 0.5rem;
       font-size: 1.9rem; }
@@ -302,15 +316,7 @@ form {
   .intro-wrap .intro .intro-text .signup p {
     font-size: 3rem; }
   .intro-wrap .intro form {
-    font-size: 3rem; }
-
-  section.icons-wrap .icon {
-    width: 28%; }
-    section.icons-wrap .icon img {
-      width: 30%;
-      height: auto; }
-    section.icons-wrap .icon h2 {
-      font-size: 2rem; } }
+    font-size: 3rem; } }
 @media screen and (min-width: 2560px) {
   body {
     font-size: 2.5rem; }
@@ -332,9 +338,6 @@ form {
       font-size: 8rem; }
   .intro-wrap .intro .intro-text .signup p {
     font-size: 4.5rem; }
-
-  section.icons-wrap .icon h2 {
-    font-size: 4rem; }
 
   section h1 {
     font-size: 6.5rem; }
