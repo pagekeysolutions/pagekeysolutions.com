@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'ChakraPetch';
+  src: url('../fnt/ChakraPetch-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ChakraPetch Light';
+  src: url('../fnt/ChakraPetch-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fnt/Montserrat-Regular.ttf') format('truetype');
+}
+body {
+  background-color: #5771DF;
+  color: white;
+}
+
+/** Title **/
+.title {
+  font-size: 3em;
+  display: inline-block;
+  text-align: center;
+}
+.title-top {
+  font-family: 'ChakraPetch Light';
+  font-size: 100%;
+}
+.title-emphasis {
+  font-family: 'ChakraPetch';
+}
+.title-bottom {
+  font-family: 'Montserrat';
+  font-size: 50%;
+  letter-spacing: 0.35em;
+  text-align: center;
+}
