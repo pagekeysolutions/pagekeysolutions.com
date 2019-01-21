@@ -1,4 +1,4 @@
-const {series, parallel, src, dest} = require('gulp');
+const {series, parallel, src, dest, watch} = require('gulp');
 var sass = require('gulp-sass'),
     livereload = require('gulp-livereload'),
     clean = require('gulp-clean');
@@ -18,12 +18,17 @@ function build() {
 		.pipe(dest('build'))
 		.pipe(livereload());
 }
+function watchReload() {
+	livereload.listen();
+	return watch(['app/**/*'], series(build));
+}
 exports.clean = series(cleanProject);
 exports.build = series(
 	cleanProject,
 	compileSass,
 	build
 );
+exports.watch = series(watchReload);
 /*
 var concat = require('gulp-concat'),
     del = require('del'),
