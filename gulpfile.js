@@ -2,6 +2,7 @@ const {series, parallel, src, dest, watch} = require('gulp');
 var sass = require('gulp-sass'),
     livereload = require('gulp-livereload'),
     clean = require('gulp-clean');
+var browserSync = require('browser-sync').create();
 
 function cleanProject() {
 	return src('build', {read:false, allowEmpty: true})
@@ -19,8 +20,10 @@ function build() {
 		.pipe(livereload());
 }
 function watchReload() {
-	livereload.listen();
-	return watch(['app/**/*'], series(build));
+	browserSync.init({
+		server: "./build"
+	});
+	return watch(['app/**/*'], series(build, function(cb){browserSync.reload();cb();}));
 }
 exports.clean = series(cleanProject);
 exports.build = series(
@@ -35,7 +38,6 @@ var concat = require('gulp-concat'),
     livereload = require('gulp-livereload'),
     sass = require('gulp-sass');
 var deploy = require('gulp-gh-pages');
-var browserSync = require('browser-sync').create();
 
 gulp.task('compileSass', function() {
 	return gulp.src('scss/main.css')
