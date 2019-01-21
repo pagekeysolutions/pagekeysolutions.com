@@ -20,7 +20,9 @@
     "yarn": "^1.12.3"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
-    "gulp-gh-pages": "^0.5.4"
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-livereload": "^4.0.1"
   }
 }
