@@ -1,10 +1,11 @@
 JS_SRC = [
-	"app/js/vendor/gsap/TweenMax.min.js",
-	"app/js/vendor/jquery/jquery-3.3.1.min.js",
-	"app/js/vendor/scrollmagic/jquery.ScrollMagic.min.js",
-	"app/js/vendor/scrollmagic/ScrollMagic.min.js",
-	"app/js/vendor/scrollmagic/animation.gsap.min.js",
-	"app/js/vendor/scrollmagic/debug.addIndicators.min.js",
+	"app/js/vendor/jquery-3.3.1.js",
+	"app/js/vendor/scrollmagic/velocity.js",
+	"app/js/vendor/scrollmagic/TweenMax.min.js",
+	"app/js/vendor/scrollmagic/ScrollMagic.js",
+	"app/js/vendor/scrollmagic/animation.gsap.js",
+	"app/js/vendor/scrollmagic/animation.velocity.js",
+	"app/js/vendor/scrollmagic/debug.addIndicators.js",
 	"app/js/main.js"
 ];
 
@@ -36,7 +37,7 @@ function compileScripts() {
 		.pipe(dest('build/js'));
 }
 function build() {
-	return src(["app/*.html", "app/img/*", "app/fnt/*"], {base: './app'})
+	return src(["app/*.html", "app/img/*", "app/fnt/*", "app/*.ico", "app/CNAME"], {base: './app'})
 		.pipe(dest('build'))
 		.pipe(livereload());
 }
@@ -44,7 +45,7 @@ function watchReload() {
 	browserSync.init({
 		server: "./build"
 	});
-	return watch(['app/**/*'], series(exports.build, function(cb){browserSync.reload();cb();}));
+	return watch(['app/**/*', 'gulpfile.js'], series(exports.build, function(cb){browserSync.reload();cb();}));
 }
 exports.clean = series(cleanProject);
 exports.build = series(
