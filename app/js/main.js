@@ -6,3 +6,7 @@ $(document).ready(function() {
   							scene.addIndicators({name: "2 (duration: 300)"})  // add indicators (requires plugin)
   							scene.addTo(controller);
 });
+
+function testfunc() {
+	console.log('hi mom');
+}

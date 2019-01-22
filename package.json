@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/pagekeysolutions/pagekeysolutions.github.io#readme",
   "dependencies": {
+    "gulp-sourcemaps": "^2.6.4",
+    "jquery": "^3.3.1",
+    "scrollmagic": "^2.0.6",
     "yarn": "^1.12.3"
   },
   "devDependencies": {
@@ -28,7 +31,7 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-livereload": "^4.0.1",
     "gulp-sass": "^4.0.2",
-    "http-server": "^0.11.1",
-    "scrollmagic": "^2.0.6"
+    "gulp-uglify": "^3.0.1",
+    "http-server": "^0.11.1"
   }
 }

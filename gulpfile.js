@@ -1,8 +1,21 @@
+JS_SRC = [
+	"app/js/vendor/gsap/TweenMax.min.js",
+	"app/js/vendor/jquery/jquery-3.3.1.min.js",
+	"app/js/vendor/scrollmagic/jquery.ScrollMagic.min.js",
+	"app/js/vendor/scrollmagic/ScrollMagic.min.js",
+	"app/js/vendor/scrollmagic/animation.gsap.min.js",
+	"app/js/vendor/scrollmagic/debug.addIndicators.min.js",
+	"app/js/main.js"
+];
+
 const {series, parallel, src, dest, watch} = require('gulp');
 var sass = require('gulp-sass'),
     livereload = require('gulp-livereload'),
-    clean = require('gulp-clean');
-var browserSync = require('browser-sync').create();
+    clean = require('gulp-clean'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    sourcemaps = require('gulp-sourcemaps'),
+    browserSync = require('browser-sync').create();
 
 function cleanProject() {
 	return src('build', {read:false, allowEmpty: true})
@@ -13,9 +26,17 @@ function compileSass() {
 		.pipe(sass())
 		.pipe(dest('build/css'))
 		.pipe(livereload());
-};
+}
+function compileScripts() {
+	return src(JS_SRC)
+		.pipe(sourcemaps.init())
+		.pipe(concat('app.min.js'))
+		.pipe(uglify())
+		.pipe(sourcemaps.write())
+		.pipe(dest('build/js'));
+}
 function build() {
-	return src(["app/*.html", "app/js/*", "app/img/*"], {base: './app'})
+	return src(["app/*.html", "app/img/*", "app/fnt/*"], {base: './app'})
 		.pipe(dest('build'))
 		.pipe(livereload());
 }
@@ -23,48 +44,13 @@ function watchReload() {
 	browserSync.init({
 		server: "./build"
 	});
-	return watch(['app/**/*'], series(build, function(cb){browserSync.reload();cb();}));
+	return watch(['app/**/*'], series(exports.build, function(cb){browserSync.reload();cb();}));
 }
 exports.clean = series(cleanProject);
 exports.build = series(
 	cleanProject,
 	compileSass,
+	compileScripts,
 	build
 );
 exports.watch = series(watchReload);
-/*
-var concat = require('gulp-concat'),
-    del = require('del'),
-    livereload = require('gulp-livereload'),
-    sass = require('gulp-sass');
-var deploy = require('gulp-gh-pages');
-
-gulp.task('compileSass', function() {
-	return gulp.src('scss/main.css')
-		.pipe(sass())
-		.pipe(gulp.dest('css'))
-		.pipe(livereload());
-});
-
-gulp.task('build', ['compileSass'], function() {
-	return gulp.src(["css/*", "img/*", "js/*"], {base: './'})
-		.pipe(gulp.dest('public'))
-		.pipe(livereload());
-});
-*/
-
-//gulp.task('deploy', function() {
-//  return gulp.src("./dist/**/*")
-//    .pipe(deploy())
-//});
-/*
-gulp.task('browser-sync', function() {
-	browserSync.init({
-		open: 'external',
-	    	//injectChanges: true,
-		server: {
-			baseDir: './'
-		}
-	});
-});
-*/
