@@ -36,6 +36,14 @@ function compileScripts() {
 		.pipe(sourcemaps.write())
 		.pipe(dest('build/js'));
 }
+function compileScriptsDebug() {
+	return src(JS_SRC)
+		// .pipe(sourcemaps.init())
+		.pipe(concat('app.min.js'))
+		// .pipe(uglify())
+		// .pipe(sourcemaps.write())
+		.pipe(dest('build/js'));
+}
 function build() {
 	return src(["app/*.html", "app/img/*", "app/fnt/*", "app/*.ico", "app/CNAME"], {base: './app'})
 		.pipe(dest('build'))
@@ -45,13 +53,19 @@ function watchReload() {
 	browserSync.init({
 		server: "./build"
 	});
-	return watch(['app/**/*', 'gulpfile.js'], series(exports.build, function(cb){browserSync.reload();cb();}));
+	return watch(['app/**/*', 'gulpfile.js'], series(exports.build_debug, function(cb){browserSync.reload();cb();}));
 }
 exports.clean = series(cleanProject);
+exports.build_debug = series(
+	cleanProject,
+	compileSass,
+	compileScriptsDebug,
+	build
+);
 exports.build = series(
 	cleanProject,
 	compileSass,
 	compileScripts,
 	build
 );
-exports.watch = series(watchReload);
+exports.watch = series(exports.build_debug, watchReload);
