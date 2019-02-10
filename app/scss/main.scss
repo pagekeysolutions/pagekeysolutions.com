@@ -71,6 +71,7 @@ nav {
     }
   }
 }
+
 .trigger {
   width: 90vw;
   height: $trigger_height;
@@ -135,6 +136,47 @@ nav {
       }
     }
   }
+  .slide2-bubble {
+    position: fixed;
+    top: 53%;
+    width: 50%;
+    left: 50%;
+    margin-left: -30vw;
+  }
+}
+
+.slide3 {
+  .portfolio-bubble {
+    position: fixed;
+    top: 28%;
+    width: 20%;
+    left: 50%;
+    a {
+      color:inherit;
+    }
+  }
+  .portfolio-feature {
+    opacity: 0;
+    position: fixed;
+    top: 30%;
+    width: 20%;
+    left: 23%;
+    background-color: white;
+    border: 1px solid black;
+    img {
+      width: 100%;
+    }
+  }
+  h2 {
+    opacity: 0;
+    position: fixed;
+    bottom: -7%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Permanent Marker';
+    font-size: 600%;
+  }
 }
 
 .bubble {
@@ -156,9 +198,9 @@ nav {
     border-right: $arrow_width solid transparent;
 
     border-bottom: $arrow_height solid white;
-    position: relative;
-    top: -($arrow_height + $bubble_padding_top_bottom);
-    left: 0;
+    position: absolute;
+    top: -($arrow_height);
+    left: 5%;
   }
   .arrow-left {
     width: 0;
@@ -167,24 +209,10 @@ nav {
     border-bottom: $arrow_width solid transparent;
 
     border-right:$arrow_height solid white;
-    position: relative;
-    left: -($bubble_padding_left_right + $arrow_height);
-    top: 0;
+    position: absolute;
+    left: -($arrow_height);
+    top: 35%;
   }
-}
-.slide2-bubble {
-  position: fixed;
-  top: 53%;
-  width: 50%;
-  left: 50%;
-  margin-left: -30vw;
-}
-.portfolio-bubble {
-  position: fixed;
-  top: 53%;
-  width: 50%;
-  left: 50%;
-  margin-left: -30vw;
 }
 
 #get-started {

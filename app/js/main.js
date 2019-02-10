@@ -1,4 +1,4 @@
-DEBUG = true;
+DEBUG = false;
 slideNum = 1;
 
 $(document).ready(function() {
@@ -35,7 +35,9 @@ $(document).ready(function() {
     TweenMax.to("#slide2-bubble3", 1, {opacity: 0}), 0,
     TweenMax.to("#checks #line3", 1, {opacity: 0, display: "none"}), 0,
     TweenMax.to("body", 1, {backgroundColor: "#E76104"}), 'default',
-    TweenMax.to("#portfolio-bubble1", 1, {opacity: 1}), 'default',
+    TweenMax.to("#portfolio-bubble1, #portfolio-feature1, .slide3 h2", 1, {opacity: 1}), 'default',
+    // TweenMax.to("#portfolio-feature1", 1, {opacity: 1}), 'default',
+    // TweenMax.to(".slide3 h2", 1, {opacity: 1}), 'default',
   ]);
 });
 

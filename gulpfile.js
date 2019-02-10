@@ -45,7 +45,7 @@ function compileScriptsDebug() {
 		.pipe(dest('build/js'));
 }
 function build() {
-	return src(["app/*.html", "app/img/*", "app/fnt/*", "app/*.ico", "app/CNAME"], {base: './app'})
+	return src(["app/*.html", "app/img/**/*", "app/fnt/*", "app/*.ico", "app/CNAME"], {base: './app'})
 		.pipe(dest('build'))
 		.pipe(livereload());
 }
