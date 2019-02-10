@@ -1,31 +1,37 @@
+DEBUG = true;
+slideNum = 1;
+
 $(document).ready(function() {
   var controller = new ScrollMagic.Controller();
   // Slide 1
-  var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: "90%", offset: "0"});
-  var timeline = new TimelineMax();
-  timeline.add(
-    TweenMax.to("#scroll-prompt, #pen-key, #swoops", 1, {opacity: 0}), 0
-  ).add(
-    TweenMax.to("body", 1, {backgroundColor: "#18633F"}), 0
-  ).add(
-    TweenMax.to("#get-started", 1, {opacity: 1})
-  ).add(
-    TweenMax.to("#checks", 1, {left: "50%"})
-  );
-  scene.setTween(timeline);
-  scene.addIndicators({name: "Slide 1"})  // add indicators (requires plugin)
-  scene.addTo(controller);
+  addSlide(controller, "#trigger1", "90%", "0", [
+    TweenMax.to("#scroll-prompt, #pen-key, #swoops", 1, {opacity: 0}), 0,
+    TweenMax.to("body", 1, {backgroundColor: "#18633F"}), 0,
+    TweenMax.to("#get-started", 1, {opacity: 1}), 'default',
+    TweenMax.to("#checks", 1, {left: "50%"}), 'default',
+  ]);
   // Slide 2
-  scene = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: "50%", offset: "0"});
-  timeline = new TimelineMax();
-  // tween1 = ;
-  // tween2 = TweenMax.to("body", 1, {backgroundColor: "#18633F"});
-  timeline.add(
-    TweenMax.to("#checks #line2", 1, {marginTop: "100%"})
-  ).add(
-    TweenMax.to("#slide2-bubble", 1, {opacity: 1})
-  );
-  scene.setTween(timeline);
-  scene.addIndicators({name: "Slide 2"})  // add indicators (requires plugin)
-  scene.addTo(controller);
+  addSlide(controller, "#trigger2", "50%", "0", [
+    TweenMax.to("#checks #line2", 1, {marginTop: "100%"}), 'default',
+    TweenMax.to("#slide2-bubble1", 1, {opacity: 1}), 'default',
+  ]);
 });
+
+function addSlide(a_controller, a_trigger, a_duration, a_offset, a_tweens) {
+  scene = new ScrollMagic.Scene({triggerElement: a_trigger, duration: a_duration, offset: a_offset});
+  timeline = new TimelineMax();
+  // It is a staggered array. first element is the tween, second is its ordinal position in the timeline
+  for (var i = 0; i < a_tweens.length; i += 2) {
+    if (a_tweens[i+1] == 'default') {
+      timeline.add(a_tweens[i]);
+    } else {
+      timeline.add(a_tweens[i], a_tweens[i+1]);
+    }
+  }
+  scene.setTween(timeline);
+  if (DEBUG) {
+    scene.addIndicators({name: "Slide " + slideNum});
+    slideNum++;
+  }
+  scene.addTo(a_controller);
+}
