@@ -30,6 +30,13 @@ $(document).ready(function() {
     TweenMax.to("#checks #line3", 1, {marginTop: "0"}), 1,
     TweenMax.to("#slide2-bubble3", 1, {opacity: 1}), 2,
   ]);
+  // Slide 5
+  addSlide(controller, "#trigger5", "50%", "0", [
+    TweenMax.to("#slide2-bubble3", 1, {opacity: 0}), 0,
+    TweenMax.to("#checks #line3", 1, {opacity: 0, display: "none"}), 0,
+    TweenMax.to("body", 1, {backgroundColor: "#E76104"}), 'default',
+    TweenMax.to("#portfolio-bubble1", 1, {opacity: 1}), 'default',
+  ]);
 });
 
 function addSlide(a_controller, a_trigger, a_duration, a_offset, a_tweens) {
