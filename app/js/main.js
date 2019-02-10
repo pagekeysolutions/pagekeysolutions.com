@@ -14,6 +14,21 @@ $(document).ready(function() {
   addSlide(controller, "#trigger2", "50%", "0", [
     TweenMax.to("#checks #line2", 1, {marginTop: "100%"}), 'default',
     TweenMax.to("#slide2-bubble1", 1, {opacity: 1}), 'default',
+    TweenMax.to("#checks #line3", 1, {marginTop: "300%"}), 'default',
+  ]);
+  // Slide 3
+  addSlide(controller, "#trigger3", "50%", "0", [
+    TweenMax.to("#slide2-bubble1", 1, {opacity: 0}), 0,
+    TweenMax.to("#checks #line1", 1, {opacity: 0, display: "none"}), 0,
+    TweenMax.to("#checks #line2", 1, {marginTop: "0"}), 1,
+    TweenMax.to("#slide2-bubble2", 1, {opacity: 1}), 2,
+  ]);
+  // Slide 4
+  addSlide(controller, "#trigger4", "50%", "0", [
+    TweenMax.to("#slide2-bubble2", 1, {opacity: 0}), 0,
+    TweenMax.to("#checks #line2", 1, {opacity: 0, display: "none"}), 0,
+    TweenMax.to("#checks #line3", 1, {marginTop: "0"}), 1,
+    TweenMax.to("#slide2-bubble3", 1, {opacity: 1}), 2,
   ]);
 });
 
