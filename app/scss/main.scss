@@ -200,6 +200,21 @@ nav {
   }
 }
 
+.slide4 {
+  .logo-final {
+    opacity: 0;
+    position: fixed;
+    width: 15%;
+    top: 10%;
+    left: 43%;
+  }
+}
+nav.finalscreen {
+  color: black;
+  top: 30%;
+  left: -7%;
+}
+
 .bubble {
   $arrow_height: 38px;
   $arrow_width: 20px;
