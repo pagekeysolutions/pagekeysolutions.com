@@ -34,11 +34,25 @@ $(document).ready(function() {
   addSlide(controller, "#trigger5", "50%", "0", [
     TweenMax.to("#slide2-bubble3", 1, {opacity: 0}), 0,
     TweenMax.to("#checks #line3", 1, {opacity: 0, display: "none"}), 0,
-    TweenMax.to("body", 1, {backgroundColor: "#E76104"}), 'default',
-    TweenMax.to("#portfolio-bubble1, #portfolio-feature1, .slide3 h2", 1, {opacity: 1}), 'default',
-    // TweenMax.to("#portfolio-feature1", 1, {opacity: 1}), 'default',
-    // TweenMax.to(".slide3 h2", 1, {opacity: 1}), 'default',
+    TweenMax.to("body", 1, {backgroundColor: "#E76104"}), 1,
+    TweenMax.to("#work1", 1, {css:{className:'+=selected'}}, .01), 'default',
+    TweenMax.to("#portfolio-bubble1, #portfolio-feature1, .slide3 h2, #works", 1, {opacity: 1}), 2,
   ]);
+  // Slide 6 - Move between portfolio elements
+  addSlide(controller, "#trigger6", "50%", "0", [
+    TweenMax.to("#work1", 1, {css:{className:'-=selected'}}, .01), 'default',
+    TweenMax.to("#work2", 1, {css:{className:'+=selected'}}, .01), 'default',
+    TweenMax.to("#portfolio-bubble1, #portfolio-feature1", 1, {opacity: 0}), 'default',
+    TweenMax.to("#portfolio-bubble2, #portfolio-feature2", 1, {opacity: 1}), 'default',
+  ]);
+  // Slide 7 - Move between portfolio elements
+  addSlide(controller, "#trigger7", "50%", "0", [
+    TweenMax.to("#work2", 1, {css:{className:'-=selected'}}, .01), 'default',
+    TweenMax.to("#work3", 1, {css:{className:'+=selected'}}, .01), 'default',
+    TweenMax.to("#portfolio-bubble2, #portfolio-feature2", 1, {opacity: 0}), 'default',
+    TweenMax.to("#portfolio-bubble3, #portfolio-feature3", 1, {opacity: 1}), 'default',
+  ]);
+
 });
 
 function addSlide(a_controller, a_trigger, a_duration, a_offset, a_tweens) {

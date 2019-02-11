@@ -177,6 +177,27 @@ nav {
     font-family: 'Permanent Marker';
     font-size: 600%;
   }
+  #works {
+    opacity: 0;
+    position: fixed;
+    top: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .work {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      background-color: white;
+      margin: 0 25px;
+    }
+    .selected {
+      width: 20px;
+      height: 20px;
+      margin-top: -5px;
+    }
+  }
 }
 
 .bubble {
