@@ -23,7 +23,7 @@ function cleanProject() {
 		.pipe(clean());
 }
 function compileSass() {
-	return src('app/scss/*.scss')
+	return src(['app/scss/main.scss','app/scss/mobile.scss'])
 		.pipe(sass())
 		.pipe(dest('build/css'))
 		.pipe(livereload());
