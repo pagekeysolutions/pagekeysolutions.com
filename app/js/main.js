@@ -57,9 +57,14 @@ $(document).ready(function() {
     TweenMax.to("body", 1, {backgroundColor: "white"}), 1,
     TweenMax.to("#portfolio-bubble3, #portfolio-feature3, .slide3 h2, #works", 1, {opacity: 0}), 'default',
     TweenMax.to("#get-started", 1, {right: "-100%"}), 'default',
-    TweenMax.to("nav", 1, {css:{className:'+=finalscreen'}}), 'default',
     TweenMax.to(".logo", 1, {opacity: 0}), 'default',
-    TweenMax.to(".logo-final", 1, {opacity: 1}), 'default',
+    TweenMax.to(".logo, nav.nav-orig", 1, {display:'none'}), 'default',
+    TweenMax.to(".logo-final, nav.nav-final, .contact-info", 1, {opacity: 1}), 'default',
+    TweenMax.to("footer", 1, {bottom: 0, ease: Power2.easeInOut}), 'default',
+  ]);
+  // Slide 9 - Contact w/ blog circled
+  addSlide(controller, "#trigger9", "50%", "0", [
+    TweenMax.to(".circled", 1, {opacity: 1}), 1,
   ]);
 });
 
