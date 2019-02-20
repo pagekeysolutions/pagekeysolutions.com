@@ -1,0 +1,160 @@
+@media screen and (min-width: 1440px) {
+  .slide2 #checks {
+    top: 30%; }
+    .slide2 #checks .line .checkbox {
+      padding: 0; }
+      .slide2 #checks .line .checkbox img {
+        width: 8em; }
+    .slide2 #checks .line .caption {
+      font-size: 9em; }
+  .slide2 .slide2-bubble {
+    font-size: 3em; }
+  .slide3 .portfolio-bubble {
+    top: 35%; } }
+
+@media screen and (max-width: 1024px) {
+  .slide2 #checks {
+    top: 30%; }
+    .slide2 #checks .line .checkbox {
+      padding: 0; }
+      .slide2 #checks .line .checkbox img {
+        width: 5em; }
+    .slide2 #checks .line .caption {
+      font-size: 6em; }
+  .slide4 .contact-info {
+    width: 65%;
+    top: 60%; }
+    .slide4 .contact-info .part .title {
+      font-size: 3em; } }
+
+@media screen and (max-width: 768px) {
+  .nav-orig {
+    display: inherit; }
+    .nav-orig .logo {
+      width: 40%;
+      margin: auto;
+      display: block; }
+    .nav-orig ul {
+      margin: auto;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%; }
+      .nav-orig ul li {
+        text-align: center; }
+        .nav-orig ul li a {
+          font-size: 1.0em; }
+  .slide1 #pen-key {
+    width: 90%;
+    top: 35%; }
+    .slide1 #pen-key img {
+      width: 100%; }
+  .slide1 #swoops {
+    width: 90%;
+    top: 60%; }
+    .slide1 #swoops img {
+      width: 100%; }
+  .slide1 #scroll-prompt {
+    width: 90%; }
+    .slide1 #scroll-prompt img {
+      width: 100%; }
+  .slide2 #checks {
+    top: 30%; }
+    .slide2 #checks .line .checkbox {
+      padding: 0; }
+      .slide2 #checks .line .checkbox img {
+        width: 4em; }
+    .slide2 #checks .line .caption {
+      font-size: 1.8em; }
+  .slide2 .slide2-bubble {
+    top: 55%;
+    width: 70%;
+    font-size: 1em;
+    padding: 1em; }
+  .slide3 .portfolio-bubble {
+    text-align: center;
+    width: 50%;
+    font-size: 0.75em;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, 0); }
+    .slide3 .portfolio-bubble .arrow-left {
+      display: none; }
+  .slide3 .portfolio-feature {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  .slide3 h2 {
+    font-size: 4em; }
+  .slide3 #works {
+    top: 30%; }
+  .slide4 .logo-final {
+    width: 50%; }
+  .slide4 nav.nav-final {
+    font-size: 1em;
+    width: 100%; }
+    .slide4 nav.nav-final ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-around; }
+    .slide4 nav.nav-final .circled {
+      box-sizing: content-box;
+      position: absolute;
+      top: -0.6em;
+      left: inherit;
+      right: 2.2em;
+      width: 6em; }
+  .slide4 .contact-info {
+    width: 90%;
+    top: 65%; }
+    .slide4 .contact-info .part .title {
+      font-size: 2em; }
+    .slide4 .contact-info .part .value {
+      font-size: 1em; }
+  .slide4 footer .inner {
+    font-size: 1em;
+    width: 90%; }
+    .slide4 footer .inner .social-link {
+      width: 2em;
+      height: 2em; }
+      .slide4 footer .inner .social-link#youtube {
+        background-color: red; }
+      .slide4 footer .inner .social-link#instagram {
+        background-color: #bc318f; }
+      .slide4 footer .inner .social-link#twitter {
+        background-color: #1DA1F2; }
+  .bubble {
+    padding: 1em; }
+  #get-started {
+    display: none; } }
+
+@media screen and (max-width: 425px) {
+  .slide3 .portfolio-bubble {
+    top: 55%; }
+  .slide3 .portfolio-feature {
+    top: 35%; }
+  .slide3 h2 {
+    font-size: 3.5em; }
+  .slide3 #works {
+    top: 25%; }
+  .slide4 nav.nav-final .circled {
+    right: -0.5em; }
+  .slide4 .contact-info .part .title {
+    font-size: 1em; }
+  .slide4 .contact-info .part .value {
+    font-size: 1em; } }
+
+@media screen and (max-width: 375px) {
+  .slide4 nav.nav-final .circled {
+    top: -0.2em;
+    right: -0.4em;
+    width: 5em; }
+  .slide4 .contact-info .part .value {
+    font-size: 0.8em; } }
+
+@media screen and (max-width: 320px) {
+  .slide4 nav.nav-final .circled {
+    top: 0.3em;
+    right: -0.3em;
+    width: 4em; }
+  .slide4 footer .inner {
+    font-size: 0.8em; } }
