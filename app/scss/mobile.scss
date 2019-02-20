@@ -1,3 +1,58 @@
+@media screen and (min-width: 1440px) {
+  .slide2 {
+    #checks {
+      top: 30%;
+      .line {
+        .checkbox {
+          padding: 0;
+          img {
+            width: 8em;
+          }
+        }
+        .caption {
+          font-size: 9em;
+        }
+      }
+    }
+    .slide2-bubble {
+      font-size: 3em;
+    }
+  }
+  .slide3 {
+    .portfolio-bubble {
+      top: 35%;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .slide2 {
+    #checks {
+      top: 30%;
+      .line {
+        .checkbox {
+          padding: 0;
+          img {
+            width: 5em;
+          }
+        }
+        .caption {
+          font-size: 6em;
+        }
+      }
+    }
+  }
+  .slide4 {
+    .contact-info {
+      width: 65%;
+      top: 60%;
+      .part {
+        .title {
+          font-size: 3em;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .nav-orig {
     display: inherit;
@@ -68,7 +123,7 @@
       text-align: center;
       width: 50%;
       font-size: 0.75em;
-      top: 55%;
+      top: 65%;
       left: 50%;
       transform: translate(-50%, 0);
       .arrow-left {
@@ -76,15 +131,15 @@
       }
     }
     .portfolio-feature {
-      top: 35%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, 0);
     }
     h2 {
-      font-size: 3.5em;
+      font-size: 4em;
     }
     #works {
-      top: 25%;
+      top: 30%;
     }
   }
   .slide4 {
@@ -104,7 +159,7 @@
         position: absolute;
         top: -0.6em;
         left: inherit;
-        right: -0.5em;
+        right: 2.2em;
         width: 6em;
       }
     }
@@ -113,7 +168,7 @@
       top: 65%;
       .part {
         .title {
-          font-size: 1em;
+          font-size: 2em;
         }
         .value {
           font-size: 1em;
@@ -147,6 +202,40 @@
 
   #get-started {
     display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .slide3 {
+    .portfolio-bubble {
+      top: 55%;
+    }
+    .portfolio-feature {
+      top: 35%;
+    }
+    h2 {
+      font-size: 3.5em;
+    }
+    #works {
+      top: 25%;
+    }
+  }
+  .slide4 {
+    nav.nav-final {
+      .circled {
+        right: -0.5em;
+      }
+    }
+    .contact-info {
+      .part {
+        .title {
+          font-size: 1em;
+        }
+        .value {
+          font-size: 1em;
+        }
+      }
+    }
   }
 }
 
