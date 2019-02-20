@@ -12,7 +12,7 @@ $(document).ready(function() {
   ]);
   // Slide 2 - Show line 1 on services
   addSlide(controller, "#trigger2", "50%", "0", [
-    TweenMax.to("#checks #line2", 1, {marginTop: "100%", ease: Power2.easeInOut}), 'default',
+    TweenMax.to("#checks #line2", 1, {marginTop: "200%", ease: Power2.easeInOut}), 'default',
     TweenMax.to("#slide2-bubble1", 1, {opacity: 1}), 'default',
     TweenMax.to("#checks #line3", 1, {marginTop: "300%", ease: Power2.easeInOut}), 'default',
   ]);
@@ -60,6 +60,7 @@ $(document).ready(function() {
     TweenMax.to(".logo", 1, {opacity: 0}), 'default',
     TweenMax.to(".logo, nav.nav-orig", 1, {display:'none'}), 'default',
     TweenMax.to(".logo-final, nav.nav-final, .contact-info", 1, {opacity: 1}), 'default',
+    TweenMax.to(".contact-info", 1, {display: 'flex'}), 'default',
     TweenMax.to("footer", 1, {bottom: 0, ease: Power2.easeInOut}), 'default',
   ]);
   // Slide 9 - Contact w/ blog circled

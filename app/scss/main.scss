@@ -230,13 +230,13 @@ nav {
   }
 
   .contact-info {
-    opacity: 0;
+    opacity: 0; display: none;
     width: 52%;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 0);
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     color: black;
     .part {

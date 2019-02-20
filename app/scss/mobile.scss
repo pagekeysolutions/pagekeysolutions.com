@@ -1,4 +1,4 @@
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .nav-orig {
     display: inherit;
     .logo {
@@ -41,8 +41,147 @@
       }
     }
   }
+  .slide2 {
+    #checks {
+      top: 30%;
+      .line {
+        .checkbox {
+          padding: 0;
+          img {
+            width: 4em;
+          }
+        }
+        .caption {
+          font-size: 1.8em;
+        }
+      }
+    }
+    .slide2-bubble {
+      top: 55%;
+      width: 70%;
+      font-size: 1em;
+      padding: 1em;
+    }
+  }
+  .slide3 {
+    .portfolio-bubble {
+      text-align: center;
+      width: 50%;
+      font-size: 0.75em;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      .arrow-left {
+        display: none;
+      }
+    }
+    .portfolio-feature {
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    h2 {
+      font-size: 3.5em;
+    }
+    #works {
+      top: 25%;
+    }
+  }
+  .slide4 {
+    .logo-final {
+      width: 50%;
+    }
+    nav.nav-final {
+      font-size: 1em;
+      width: 100%;
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .circled {
+        box-sizing: content-box;
+        position: absolute;
+        top: -0.6em;
+        left: inherit;
+        right: -0.5em;
+        width: 6em;
+      }
+    }
+    .contact-info {
+      width: 90%;
+      top: 65%;
+      .part {
+        .title {
+          font-size: 1em;
+        }
+        .value {
+          font-size: 1em;
+        }
+      }
+    }
+    footer {
+      .inner {
+        font-size: 1em;
+        width: 90%;
+        .social-link {
+          width: 2em;
+          height: 2em;
+          &#youtube {
+            background-color: red;
+          }
+          &#instagram {
+            background-color: #bc318f;
+          }
+          &#twitter {
+            background-color: #1DA1F2;
+          }
+        }
+      }
+    }
+  }
+
+  .bubble {
+    padding: 1em;
+  }
 
   #get-started {
     display: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .slide4 {
+    nav.nav-final {
+      .circled {
+        top: -0.2em;
+        right: -0.4em;
+        width: 5em;
+      }
+    }
+    .contact-info {
+      .part {
+        .value {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .slide4 {
+    nav.nav-final {
+      .circled {
+        top: 0.3em;
+        right: -0.3em;
+        width: 4em;
+      }
+    }
+    footer {
+      .inner {
+        font-size: 0.8em;
+      }
+    }
   }
 }
