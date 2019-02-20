@@ -16,7 +16,8 @@ var sass = require('gulp-sass'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     sourcemaps = require('gulp-sourcemaps'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+		deploy = require('gulp-gh-pages');
 
 function cleanProject() {
 	return src('build', {read:false, allowEmpty: true})
@@ -55,6 +56,10 @@ function watchReload() {
 	});
 	return watch(['app/**/*', 'gulpfile.js'], series(exports.build_debug, function(cb){browserSync.reload();cb();}));
 }
+function deployToGithub() {
+	return gulp.src('./build/**/*')
+		.pipe(deploy());
+}
 exports.clean = series(cleanProject);
 exports.build_debug = series(
 	cleanProject,
@@ -69,3 +74,4 @@ exports.build = series(
 	build
 );
 exports.watch = series(exports.build_debug, watchReload);
+exports.deploy = series(exports.build, deployToGithub);
