@@ -37,6 +37,7 @@ $(document).ready(function() {
     TweenMax.to("body", 1, {backgroundColor: "#E76104"}), 1,
     TweenMax.to("#work1", 1, {css:{className:'+=selected'}}, .01), 'default',
     TweenMax.to("#portfolio-bubble1, #portfolio-feature1, .slide3 h2, #works", 1, {opacity: 1}), 2,
+    TweenMax.to("#works", 1, {display: 'flex'}), 2,
   ]);
   // Slide 6 - Portfolio work 2
   addSlide(controller, "#trigger6", "50%", "0", [
@@ -60,6 +61,7 @@ $(document).ready(function() {
     TweenMax.to(".logo", 1, {opacity: 0}), 'default',
     TweenMax.to(".logo, nav.nav-orig", 1, {display:'none'}), 'default',
     TweenMax.to(".logo-final, nav.nav-final, .contact-info", 1, {opacity: 1}), 'default',
+    TweenMax.to(".logo-final, nav.nav-final", 1, {display: 'inherit'}), 'default',
     TweenMax.to(".contact-info", 1, {display: 'flex'}), 'default',
     TweenMax.to("footer", 1, {bottom: 0, ease: Power2.easeInOut}), 'default',
   ]);

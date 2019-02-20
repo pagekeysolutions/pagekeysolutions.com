@@ -15,6 +15,7 @@ var sass = require('gulp-sass'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
+		uglifycss = require('gulp-uglifycss'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync').create(),
 		deploy = require('gulp-gh-pages');
@@ -26,6 +27,9 @@ function cleanProject() {
 function compileSass() {
 	return src(['app/scss/main.scss','app/scss/mobile.scss'])
 		.pipe(sass())
+		.pipe(uglifycss({
+			uglyComments: true
+		}))
 		.pipe(dest('build/css'))
 		.pipe(livereload());
 }
