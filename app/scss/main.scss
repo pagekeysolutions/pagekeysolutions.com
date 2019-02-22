@@ -1,25 +1,7 @@
 $trigger_height: 120vh;
 
-@font-face {
-  font-family: 'ChakraPetch';
-  src: url('../fnt/ChakraPetch-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'ChakraPetch Light';
-  src: url('../fnt/ChakraPetch-Light.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../fnt/Montserrat-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Permanent Marker';
-  src: url('../fnt/PermanentMarker-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'IBM Plex Mono';
-  src: url('../fnt/IBMPlexMono-Bold.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch|IBM+Plex+Mono|Montserrat|Permanent+Marker');
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -134,7 +116,7 @@ nav {
       .caption {
         font-size: 9em;
         display: inline-block;
-        font-family: 'Permanent Marker';
+        font-family: 'Permanent Marker', cursive;
       }
     }
   }
@@ -220,6 +202,9 @@ nav {
     left: 50%;
     transform: translate(-50%, 0);
     display: none;
+    ul {
+      margin: auto;
+    }
     .circled {
       pointer-events: none;
       opacity: 0;
@@ -252,7 +237,7 @@ nav {
         font-size: 400%;
       }
       .value {
-        font-family: 'Montserrat';
+        font-family: 'Montserrat', sans-serif;
         font-size: 150%;
       }
     }
@@ -353,7 +338,8 @@ nav {
   display: block;
   text-decoration: none;
   box-shadow: 5px 5px 10px black;
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
   padding: 0.4em;
   position: fixed;
   right: -2.65em;
